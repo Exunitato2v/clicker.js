@@ -26,7 +26,7 @@
         font-weight: 700;
         color: white;
         text-align: center;
-        padding: 69px;
+        padding: 69px 0;
         transition: all 0.1s ease 0s;
         -webkit-touch-callout: none;
         /*  чтобы не выделялось */
