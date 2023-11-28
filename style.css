@@ -1,0 +1,49 @@
+    .title {
+        font-size: 50px;
+        font-weight: 700;
+        margin: 40px;
+        text-align: center;
+    }
+    
+    .circle {
+        display: block;
+        background-color: black;
+        border: 0px solid;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin: 120px auto;
+        transition: all 0.1s ease 0s;
+    }
+    
+    .counter {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        padding: 69px;
+        transition: all 0.1s ease 0s;
+        -webkit-touch-callout: none;
+        /*  чтобы не выделялось */
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, */
+    }
+    
+    .circle.clicked {
+        width: 215px;
+        height: 215px;
+    }
+    
+    .circle.clicked .counter {
+        font-size: 65px;
+    }
