@@ -7,6 +7,7 @@ circle.addEventListener("click", function() {
     clickedanim()
     UpdateValue(1)
     randomSound()
+    playVideo()
 })
 
 let counter = document.querySelector(".counter")
@@ -53,3 +54,16 @@ AudioArray.push(ppoSound)
 AudioArray.push(travisSound)
 
 console.log(AudioArray)
+
+// video
+
+const video = document.querySelector('video');
+video.play();
+
+function playVideo() {
+    if (+(elementValue.innerHTML) == 100) {
+        video.classList.add('active');
+        video.muted = false;
+        video.play();
+    }
+}
