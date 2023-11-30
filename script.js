@@ -61,7 +61,7 @@ const video = document.querySelector('video');
 video.play();
 
 function playVideo() {
-    if (+(elementValue.innerHTML) == 100) {
+    if (+(counter.innerHTML) == 100) {
         video.classList.add('active');
         video.muted = false;
         video.play();
