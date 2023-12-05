@@ -8,6 +8,7 @@ circle.addEventListener("click", function() {
     UpdateValue(1)
     randomSound()
     playVideo()
+    randomColor()
 })
 
 let counter = document.querySelector(".counter")
@@ -60,10 +61,42 @@ console.log(AudioArray)
 const video = document.querySelector('video');
 video.play();
 
+let timeOutVideo;
+
+let videoArr = [];
+let whistle = document.querySelector('video.whistle');
+let daniel = document.querySelector('video.daniel');
+let griffin = document.querySelector('video.griffin');
+let scream = document.querySelector('video.scream');
+
+videoArr.push(whistle);
+videoArr.push(daniel);
+videoArr.push(griffin);
+videoArr.push(scream);
+
 function playVideo() {
-    if (+(counter.innerHTML) == 100) {
+    let index = Math.floor(Math.random() * 10) % videoArr.length;
+    console.log(index);
+    let video = videoArr[index];
+    if (Math.floor(Math.random() * 100) % 100 <= 10) {
         video.classList.add('active');
         video.muted = false;
         video.play();
+        timeOutVideo = setTimeout(() => {
+            video.muted = true;
+            video.pause();
+            video.classList.remove('active');
+            video.currentTime = 0
+
+        }, video.duration * 1000);
+
     }
+
+}
+
+function randomColor() {
+    let r = Math.floor(Math.random() * 100);
+    let g = Math.floor(Math.random() * 100);
+    let b = Math.floor(Math.random() * 100);
+    circle.style.background = "rgb(" + r + "," + g + "," + b + ")"
 }
