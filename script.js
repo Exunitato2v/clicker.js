@@ -64,15 +64,11 @@ video.play();
 let timeOutVideo;
 
 let videoArr = [];
-let whistle = document.querySelector('video.whistle');
-let daniel = document.querySelector('video.daniel');
-let griffin = document.querySelector('video.griffin');
-let scream = document.querySelector('video.scream');
 
-videoArr.push(whistle);
-videoArr.push(daniel);
-videoArr.push(griffin);
-videoArr.push(scream);
+document.querySelectorAll('video').forEach(function(item) {
+    videoArr.push(item)
+})
+
 
 function playVideo() {
     let index = Math.floor(Math.random() * 10) % videoArr.length;
